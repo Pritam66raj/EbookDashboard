@@ -1,27 +1,19 @@
-# EbookDashboard
+ Login & Logout system using localStorage token
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
+ Auth Guard (CanActivateFn) to protect routes from unauthorized access
 
-## Development server
+ Reading History Form — users can enter category and pages read
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+ Dynamic Table View — shows total pages read per category
 
-## Code scaffolding
+ Data Persistence using localStorage for login and history
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ Angular Material Components for forms, buttons, inputs
 
-## Build
+ Simple CSS Styling for clean UI (no external UI/UX framework)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+ Routing Setup — separate routes for login and dashboard
 
-## Running unit tests
+ Logout Button clears token and redirects to login
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+ Code written step-by-step and cleanly structure
