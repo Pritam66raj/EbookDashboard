@@ -1,0 +1,45 @@
+<h2>Dashboard</h2>
+
+<div class="logout-container">
+  <button mat-raised-button color="warn" (click)="logout()">Logout</button>
+</div>
+
+<div class="form-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Category</mat-label>
+    <input matInput [(ngModel)]="newEntry.category" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Page</mat-label>
+    <input matInput type="number" [(ngModel)]="newEntry.page" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Line</mat-label>
+    <input matInput type="number" [(ngModel)]="newEntry.line" />
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="addHistory()">Add</button>
+</div>
+
+<table mat-table [dataSource]="categoryProgress" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="category">
+    <th mat-header-cell *matHeaderCellDef> Category </th>
+    <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="pagesRead">
+    <th mat-header-cell *matHeaderCellDef> Pages Read </th>
+    <td mat-cell *matCellDef="let element"> {{element.pagesRead}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="linesRead">
+    <th mat-header-cell *matHeaderCellDef> Lines Read </th>
+    <td mat-cell *matCellDef="let element"> {{element.linesRead}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="['category', 'pagesRead', 'linesRead']"></tr>
+  <tr mat-row *matRowDef="let row; columns: ['category', 'pagesRead', 'linesRead'];"></tr>
+</table>
